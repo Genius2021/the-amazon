@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 mongoose
-     .connect(process.env.MONGODB_URL || "mongodb://localhost:27017/amazona", 
+     .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/amazona", 
      {  useUnifiedTopology: true })
      .then(() => console.log( 'Database Connected' ))
      .catch(err => console.log( err ));

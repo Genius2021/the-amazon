@@ -5,11 +5,14 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server.js",
   "scripts": {
-      "start": "node server.js",
+      "start": "node backend/server.js",
       "client-install": "cd frontend && npm install",
       "backend-install": "npm install",
       "frontend": "npm start --prefix frontend",
-      "heroku-postbuild": "cd frontend && npm install && npm run build"
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+  },
+  "engines": {
+      "node" : "16.13.0"
   },
   "author": "",
   "license": "ISC",
